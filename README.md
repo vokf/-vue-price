@@ -1,4 +1,4 @@
-# vueprice
+# vue_price 我的项目
 
 ## Project setup
 ```
