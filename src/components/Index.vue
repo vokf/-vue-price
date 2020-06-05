@@ -1,6 +1,6 @@
 <template >
 	<el-container >
-		
+		<!--头部-->
 		<el-header style = "width: 100%;height: 60px;" >
 			购物后台管理系统
 		</el-header >
