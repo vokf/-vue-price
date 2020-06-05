@@ -101,7 +101,7 @@
                     });
                 }).catch(() => {
                     //错误处理
-                    const h = this.$createElement;
+                    const h = _this.$createElement;
                     _this.$message({
                         type: 'info',
                         message: '已经取消'
