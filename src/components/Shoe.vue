@@ -1,4 +1,4 @@
-<template style = "height: 500px; width: 600px;border: 1px solid red" >
+<template style = "height: 500px; width: 600px" >
 	<div style = " margin-top:50px;" >
 		<template >
 			<el-form >
