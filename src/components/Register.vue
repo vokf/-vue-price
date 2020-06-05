@@ -81,7 +81,6 @@
 				</el-form-item >
 				<!--提交按钮-->
 				<el-button
-						
 						type = "primary"
 						style = "width: 100px;margin-left: 270px"
 						@click = "register()" >提交
@@ -222,7 +221,6 @@
                     url: 'http://localhost:8090/register',
 					// 数据
                     data: registData,
-					// 请求头
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json',
@@ -257,7 +255,7 @@
                         }
                     }
                 }, err => {
-                    //处理错误
+                    //处理失败消息
                     const h = this.$createElement;
                     _this.$message.error('服务器错误');
                     _this.$notify({
