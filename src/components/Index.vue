@@ -5,7 +5,9 @@
 			购物后台管理系统
 		</el-header >
 		<el-container >
+			<!--aside-->
 			<el-aside width = "300px" >
+				<!--menu -->
 				<el-menu
 						
 						:default-active = "this.$route.path"
@@ -16,6 +18,7 @@
 							<i class="el-icon-location"></i>
 							<span>管理员</span>
 						</template>
+						<!--menu-item-->
 						<el-menu-item-group>
 							<template slot="title">操作</template>
 							<el-menu-item index="1-1">操作</el-menu-item>
@@ -44,6 +47,7 @@
 					</el-submenu>
 				</el-menu >
 			</el-aside >
+			<!--main-->
 			<el-main style="margin-top: 50px">
 				<el-row :gutter="20">
 					<el-col :span="19"><div class="grid-content"></div></el-col>
@@ -69,16 +73,21 @@
             }
         },
         methods: {
+            //登出方法
+			
             logout: function () {
                 const _this = this;
                 _this.$confirm('是否确认退出', '提示', {
-                    
+                    // 确认按钮对应的
                     confirmButtonText: '确定',
+					// 取消按钮
                     cancelButtonText: '取消',
-                    type: 'warning'
+                    type: 'warning' //type
                    
                 }).then(() => {
+                    //方法执行成功之后 将页面推到登录页面
                     _this.$router.push('/login');
+                    //给用户来提示消息
                     const h = this.$createElement;
                     _this.message({
                         type: 'success',
@@ -90,6 +99,7 @@
                         message:h('i', { style: 'color: teal'},'退出成功')
                     });
                 }).catch(() => {
+                    //错误处理
                     const h = this.$createElement;
                     _this.$message({
                         type: 'info',
