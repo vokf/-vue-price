@@ -9,7 +9,6 @@
 				style = "height: 900px;margin-left: auto;margin-right: auto;width:700px" >
 			<!--表单-->
 			<el-form
-					
 					:model = "user"
 					:rules = "rules"
 					status-icon
